@@ -51,3 +51,38 @@ window.onload = () => {
     toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
   });
 };
+
+
+// EmailJS Contact Form
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (!name || !email || !message) {
+        alert("Please fill out all required fields!");
+        return;
+    }
+
+    emailjs.send("service_z4ea0ys", "template_udax0pn", {
+        from_name: name,
+        reply_to: email,
+        message: message,
+        phone: document.getElementById("phone").value || "N/A"
+    })
+    .then(() => {
+        alert(`Thank you, ${name}! Your message has been sent.`);
+        document.getElementById("contactForm").reset();
+    }, (error) => {
+        console.error("Failed to send email:", error);
+        alert("Oops! Something went wrong. Please try again.");
+    });
+});
+
+// Smooth scroll for "Contact Me" button
+document.getElementById("contactBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("contactForm").scrollIntoView({behavior: "smooth"});
+});

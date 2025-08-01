@@ -352,3 +352,173 @@ nav ul li a.active {
 .dark-mode .info-grid div {
   background-color: #334155;
 }
+
+
+
+/* contact me */
+.contactMe {
+  padding: 60px 10%;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.contactMe .button {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contactMe .button a {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contactMe .button .primary {
+  background-color: #333;
+  color: white;
+}
+
+.contactMe .button .secondary {
+  background-color: #f1f1f1;
+  color: #222;
+}
+
+.contactMe .button .primary:hover {
+  opacity: 0.8;
+}
+
+.contactMe .button .secondary:hover {
+  background-color: #ddd;
+}
+
+/* Social Platforms & Form */
+.Contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.platforms {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.platforms .card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.platforms .card i {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+.platforms .card:hover {
+  transform: translateY(-5px);
+}
+
+.form-contact {
+  flex: 1 1 45%;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.form-contact h3 {
+  margin-bottom: 15px;
+}
+
+.form-contact input,
+.form-contact textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.form-contact textarea {
+  resize: none;
+  height: 120px;
+}
+
+.form-contact button {
+  width: 100%;
+  padding: 12px;
+  background:#333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-contact button:hover {
+  opacity: 0.8;
+
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .Contact {
+    flex-direction: column;
+  }
+  .platforms, .form-contact {
+    width: 100%;
+  }
+}
+
+/* DARK MODE STYLES */
+.dark-mode .contactMe {
+  background-color: #0f172a;
+}
+
+.dark-mode .contactMe .section-subtitle {
+  color: #ddd;
+}
+
+.dark-mode .contactMe .button .primary {
+  background-color: #fff;
+  color: #0f172a;
+}
+.dark-mode .contactMe .button .secondary:hover{
+  opacity: 0.8;
+}
+.dark-mode .contactMe .button .secondary {
+  background-color: #334155;
+  color: white;
+}
+
+.dark-mode .platforms .card {
+  background: #1e293b;
+  color: white;
+}
+
+.dark-mode .form-contact {
+  background: #1e293b;
+  color: white;
+}
+
+.dark-mode .form-contact input,
+.dark-mode .form-contact textarea {
+  background: #334155;
+  color: white;
+  border: 1px solid #555;
+}
